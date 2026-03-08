@@ -46,7 +46,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "When I'm not coding, you'll find me sketching, binge-watching sci-fi shows, exploring cafés, or experimenting with creative coding art! 🎨",
     followUps: [
-      { q: "Favorite show?", a: "I love sci-fi and mystery — think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
+      { q: "Favorite show?", a: "I love sci-fi and mystery - think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
       { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
       { q: "Music taste?", a: "Very eclectic — from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
       { q: "Travel?", a: "I'd love to travel more! Dream destinations include Japan, Iceland, and New Zealand. 🌍" },
