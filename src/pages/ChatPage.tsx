@@ -52,12 +52,11 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   contact: {
     initial: "How to reach you?",
     answer:
-      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyani@example.com\n• LinkedIn: linkedin.com/in/devyani\n• GitHub: github.com/devyani",
+      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyanighildiyal07@gmail.com\n• LinkedIn: linkedin.com/in/devyani-ghildiyal-804948223\n• GitHub: github.com/devyanighildiyal",
     followUps: [
-      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities - freelance, full-time, or collaborations. Let's chat! 🤝" },
-      { q: "Best way to reach you?", a: "Email is the most reliable way. I usually respond within 24 hours!" },
-      { q: "Social media?", a: "You can find me on Twitter and Instagram too - I share my creative work and tech thoughts there." },
-      { q: "Do you freelance?", a: "Yes, I take on select freelance projects - especially creative and design-focused ones!" },
+      { q: "Best way to reach you?", a: "The best way to reach me is through email or LinkedIn. If you happen to have my phone number, then that's probably the easiest way to contact me. 😊" },
+      { q: "Social media?", a: "You can find me on Twitter and Instagram too!\n\n• Instagram: instagram.com/devyanighildiyal\n• Twitter: x.com/heyItsDevyani" },
+      { q: "Do you freelance?", a: "Yes, I do. I'm open to freelance projects, collaborations, and interesting tech opportunities. 😊" },
     ],
   },
 };
