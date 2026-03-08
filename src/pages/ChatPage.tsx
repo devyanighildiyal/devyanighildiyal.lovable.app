@@ -11,12 +11,12 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   about: {
     initial: "Who are you?",
     answer:
-      "Hey! I'm Devyani Ghildiyal — a 21-year-old creative developer and designer who loves turning ideas into beautiful digital experiences. I'm passionate about blending code with art! ✨",
+      "My name is Devyani Ghildiyal. I currently live in Noida, Uttar Pradesh. I am a Computer Science student with a keen interest in Artificial Intelligence and Machine Learning ✨",
     followUps: [
-      { q: "Where are you from?", a: "I'm from India 🇮🇳 — a land of diversity, culture, and incredible food!" },
-      { q: "What's your background?", a: "I have a background in computer science with a strong interest in design, front-end development, and creative coding." },
-      { q: "What drives you?", a: "Curiosity and the joy of creating things that make people smile. I believe technology should feel human." },
-      { q: "What's a fun fact about you?", a: "I can spend hours debugging code and still find it therapeutic. Also, I'm a huge tea person! 🍵" },
+      { q: "Where are you from?", a: "I'm originally from Dehradun, Uttarakhand." },
+      { q: "What drives you?", a: "What drives me is my curiosity to learn new technologies and understand how things work, especially in the field of AI and machine learning. I enjoy solving problems and building projects that turn ideas into real, practical solutions." },
+      { q: "How did you get started in tech?", a: "I first got started in tech back in 5th grade during my computer science class at Amity. We were introduced to Scratch, where we learned how to build simple games and animations. Creating games there really sparked my interest, which gradually grew into a deeper curiosity about computers and technology." },
+      { q: "What are your education qualifications?", a: "I completed my schooling at Amity International School, Noida, where I studied from Nursery to 8th grade. I then attended DPS RK Puram, Delhi for 9th to 12th grade. Currently, I am a fourth-year student at Manipal University Jaipur. 🎓" },
     ],
   },
   projects: {
