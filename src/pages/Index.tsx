@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emoticon from "@/assets/emoticon.png";
 
@@ -14,8 +14,6 @@ const Index = () => {
   const navigate = useNavigate();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [eyeOffset, setEyeOffset] = useState({ x: 0, y: 0 });
-  const emoticonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMouse = (e: MouseEvent) => {
@@ -31,23 +29,6 @@ const Index = () => {
     const dx = (mousePos.x - cx) / cx;
     const dy = (mousePos.y - cy) / cy;
     setOffset({ x: dx * 30, y: dy * 20 });
-
-    // Calculate eye pupil offset relative to emoticon center
-    if (emoticonRef.current) {
-      const rect = emoticonRef.current.getBoundingClientRect();
-      const ecx = rect.left + rect.width / 2;
-      const ecy = rect.top + rect.height / 2;
-      const edx = mousePos.x - ecx;
-      const edy = mousePos.y - ecy;
-      const dist = Math.sqrt(edx * edx + edy * edy);
-      const maxMove = 4;
-      const clampedDist = Math.min(dist, 200);
-      const ratio = clampedDist / 200;
-      setEyeOffset({
-        x: (edx / (dist || 1)) * maxMove * ratio,
-        y: (edy / (dist || 1)) * maxMove * ratio,
-      });
-    }
   }, [mousePos]);
 
   return (
@@ -65,8 +46,7 @@ const Index = () => {
       </h1>
 
       <div
-        ref={emoticonRef}
-        className="mb-16 transition-transform duration-150 ease-out relative"
+        className="mb-16 transition-transform duration-150 ease-out"
         style={{
           transform: `translate(${offset.x}px, ${offset.y}px) rotate(${offset.x * 0.3}deg)`,
         }}
@@ -75,34 +55,6 @@ const Index = () => {
           src={emoticon}
           alt="Devyani emoticon"
           className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_hsl(47,100%,60%,0.3)]"
-        />
-        {/* Left eye glint */}
-        <div
-          className="absolute rounded-full pointer-events-none"
-          style={{
-            width: "5px",
-            height: "5px",
-            backgroundColor: "white",
-            top: "42%",
-            left: "36%",
-            transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
-            transition: "transform 0.1s ease-out",
-            boxShadow: "0 0 3px 1px rgba(255,255,255,0.5)",
-          }}
-        />
-        {/* Right eye glint */}
-        <div
-          className="absolute rounded-full pointer-events-none"
-          style={{
-            width: "5px",
-            height: "5px",
-            backgroundColor: "white",
-            top: "40%",
-            left: "49%",
-            transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
-            transition: "transform 0.1s ease-out",
-            boxShadow: "0 0 3px 1px rgba(255,255,255,0.5)",
-          }}
         />
       </div>
 
