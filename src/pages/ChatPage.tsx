@@ -42,10 +42,10 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
       "My hobbies include exploring new technologies and learning about advancements in AI and software development. I also enjoy dancing, singing, and photography, and have a strong interest in creative and performing arts.🎶💃📷💻",
     followUps: [
       { q: "What dance do you perform?", a: "I perform Bharatanatyam, a classical Indian dance form, and I have been practicing it for over 11 years. Along with that, I also enjoy exploring and performing various other dance styles. If anyone ever wants to collaborate on dance projects or performances, feel free to reach out! 💃✨" },
-      { q: "Favorite show?", a: "I love sci-fi and mystery - think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
-      { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
-      { q: "Music taste?", a: "Very eclectic - from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
-      { q: "Travel?", a: "I'd love to travel more! Dream destinations include Japan, Iceland, and New Zealand. 🌍" },
+      { q: "Favorite show?", a: "My favorite shows are Brooklyn Nine-Nine, Hidden Love, and Frieren: Beyond Journey's End." },
+      { q: "Do you game?", a: "Yes, I do play games. I usually play Mobile Legends, Legend of Ace, League of Legends, Roblox, and Smash Karts😄" },
+      { q: "Music taste?", a: "My music taste is honestly all over the place. I listen to BTS, Bollywood music, Garhwali songs, Little Mix, and Sabrina Carpenter, and I also enjoy devotional music, so it's a pretty wide range depending on my mood. 🎶" },
+      { q: "Travel?", a: "I love to travel. Being a Pahadi (someone from the mountains), I especially love traveling to the mountains. The peace and quiet, along with the beautiful views and cool weather, just make it feel like heaven. 🏔️✨" },
     ],
   },
   contact: {
