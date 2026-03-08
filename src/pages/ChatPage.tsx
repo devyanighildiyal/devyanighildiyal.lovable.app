@@ -22,12 +22,12 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   projects: {
     initial: "What are your projects?",
     answer:
-      "I've worked on a variety of projects — from interactive web apps and portfolio sites to creative experiments with animations and generative art. Each project teaches me something new! 🚀",
+      "I've worked on a range of projects spanning AI/ML, cybersecurity, and full-stack development. Here are some highlights! 🚀\n\n1. Cyber Shield — ML-powered cybersecurity browser extension for detecting unsafe browsing patterns.\n🔗 github.com/devyanighildiyal/Team101\n\n2. Deepfake Detection System — Deep learning system using XceptionNet & CNN–LSTM–Attention on Celeb-DF dataset.\n🔗 github.com/devyanighildiyal/minor_project_deep_fake\n\n3. Helper MS (Google Girl Hackathon) — Full-stack HRMS platform with REST APIs for resume processing & onboarding.\n🔗 github.com/devyanighildiyal/Google-Girl-Hackathon_SWE_2025",
     followUps: [
-      { q: "What's your favorite project?", a: "This portfolio itself! Building something that represents me creatively was a rewarding challenge." },
-      { q: "Do you do open source?", a: "Yes! I love contributing to open-source projects. It's a great way to learn and give back to the community." },
-      { q: "Any team projects?", a: "I've collaborated on hackathon projects and group assignments — teamwork makes the dream work! 🤝" },
-      { q: "What tech do you use?", a: "React, TypeScript, Tailwind CSS, Node.js, and I'm always exploring new tools and frameworks." },
+      { q: "Tell me more projects!", a: "4. AI-Powered Invoice & PO Verification (Futurix AI) — Automatically verifies invoices against purchase orders to detect mismatches.\n🔗 github.com/devyanighildiyal/AI-Powered-Invoice-and-Purchase-Order-Verification-Futurix-AI-\n\n5. KPI Agentic Intelligence — An agentic AI system that analyzes datasets and computes KPIs for data-driven decisions.\n🔗 github.com/devyanighildiyal/kpi-agentic-intelligence\n\n6. Surface Defect Detection System (Ongoing Research) — Computer vision system for industrial defect detection using lightweight CNNs and Vision Transformers." },
+      { q: "What's your favorite project?", a: "The Deepfake Detection System — combining deep learning architectures to solve a real-world problem in media authenticity was both challenging and rewarding! 🎯" },
+      { q: "Any team projects?", a: "Yes! Helper MS was built for the Google Girl Hackathon, and Cyber Shield was a team collaboration. Teamwork makes the dream work! 🤝" },
+      { q: "What tech do you use?", a: "Python, TensorFlow, PyTorch, React, Node.js, REST APIs, and I'm always exploring new tools and frameworks." },
     ],
   },
   skills: {
