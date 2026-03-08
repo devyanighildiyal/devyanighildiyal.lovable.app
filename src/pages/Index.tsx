@@ -80,28 +80,28 @@ const Index = () => {
         <div
           className="absolute rounded-full pointer-events-none"
           style={{
-            width: "6px",
-            height: "6px",
-            backgroundColor: "red",
+            width: "5px",
+            height: "5px",
+            backgroundColor: "white",
             top: "42%",
             left: "36%",
             transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
             transition: "transform 0.1s ease-out",
-            boxShadow: "0 0 4px 2px rgba(255,255,255,0.7)",
+            boxShadow: "0 0 3px 1px rgba(255,255,255,0.5)",
           }}
         />
         {/* Right eye glint */}
         <div
           className="absolute rounded-full pointer-events-none"
           style={{
-            width: "6px",
-            height: "6px",
-            backgroundColor: "red",
-            top: "39%",
-            left: "48%",
+            width: "5px",
+            height: "5px",
+            backgroundColor: "white",
+            top: "40%",
+            left: "49%",
             transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
             transition: "transform 0.1s ease-out",
-            boxShadow: "0 0 4px 2px rgba(255,255,255,0.7)",
+            boxShadow: "0 0 3px 1px rgba(255,255,255,0.5)",
           }}
         />
       </div>
