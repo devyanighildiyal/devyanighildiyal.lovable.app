@@ -11,7 +11,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   about: {
     initial: "Who are you?",
     answer:
-      "Hey! I'm Devyani — a creative developer and designer who loves turning ideas into beautiful digital experiences. I'm passionate about blending code with art! ✨",
+      "Hey! I'm Devyani Ghildiyal — a 21-year-old creative developer and designer who loves turning ideas into beautiful digital experiences. I'm passionate about blending code with art! ✨",
     followUps: [
       { q: "Where are you from?", a: "I'm from India 🇮🇳 — a land of diversity, culture, and incredible food!" },
       { q: "What's your background?", a: "I have a background in computer science with a strong interest in design, front-end development, and creative coding." },
