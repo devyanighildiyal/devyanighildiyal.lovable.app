@@ -41,6 +41,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "My hobbies include exploring new technologies and learning about advancements in AI and software development. I also enjoy dancing, singing, and photography, and have a strong interest in creative and performing arts.🎶💃📷💻",
     followUps: [
+      { q: "What dance do you perform?", a: "I perform Bharatanatyam, a classical Indian dance form, and I have been practicing it for over 11 years. Along with that, I also enjoy exploring and performing various other dance styles. If anyone ever wants to collaborate on dance projects or performances, feel free to reach out! 💃✨" },
       { q: "Favorite show?", a: "I love sci-fi and mystery - think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
       { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
       { q: "Music taste?", a: "Very eclectic - from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
