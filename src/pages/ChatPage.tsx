@@ -1,6 +1,30 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Home, Send } from "lucide-react";
+import { Home } from "lucide-react";
+
+const linkify = (text: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|net|dev|io|app|in|co)(?:\/[^\s]*)?|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, i) => {
+    if (urlRegex.test(part)) {
+      urlRegex.lastIndex = 0;
+      if (part.includes("@") && !part.startsWith("http")) {
+        return (
+          <a key={i} href={`mailto:${part}`} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+            {part}
+          </a>
+        );
+      }
+      const href = part.startsWith("http") ? part : `https://${part}`;
+      return (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+};
 
 interface Message {
   role: "bot" | "user";
@@ -146,7 +170,7 @@ const ChatPage = () => {
                   : "bg-chat-bubble text-foreground rounded-bl-md"
               }`}
             >
-              {msg.text}
+              {linkify(msg.text)}
             </div>
           </div>
         ))}
