@@ -22,10 +22,10 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   projects: {
     initial: "What are your projects?",
     answer:
-      "I've worked on a range of projects spanning AI/ML, cybersecurity, and full-stack development. Here are some highlights! 🚀\n\n1. Cyber Shield — ML-powered cybersecurity browser extension for detecting unsafe browsing patterns.\n🔗 github.com/devyanighildiyal/Team101\n\n2. Deepfake Detection System — Deep learning system using XceptionNet & CNN–LSTM–Attention on Celeb-DF dataset.\n🔗 github.com/devyanighildiyal/minor_project_deep_fake\n\n3. Helper MS (Google Girl Hackathon) — Full-stack HRMS platform with REST APIs for resume processing & onboarding.\n🔗 github.com/devyanighildiyal/Google-Girl-Hackathon_SWE_2025",
+      "I've worked on a range of projects spanning AI/ML, cybersecurity, and full-stack development. Here are some highlights! 🚀\n\n1. Cyber Shield - ML-powered cybersecurity browser extension for detecting unsafe browsing patterns.\n🔗 github.com/devyanighildiyal/Team101\n\n2. Deepfake Detection System - Deep learning system using XceptionNet & CNN-LSTM-Attention on Celeb-DF dataset.\n🔗 github.com/devyanighildiyal/minor_project_deep_fake\n\n3. Helper MS (Google Girl Hackathon) - Full-stack HRMS platform with REST APIs for resume processing & onboarding.\n🔗 github.com/devyanighildiyal/Google-Girl-Hackathon_SWE_2025",
     followUps: [
-      { q: "Tell me more projects!", a: "4. AI-Powered Invoice & PO Verification (Futurix AI) — Automatically verifies invoices against purchase orders to detect mismatches.\n🔗 github.com/devyanighildiyal/AI-Powered-Invoice-and-Purchase-Order-Verification-Futurix-AI-\n\n5. KPI Agentic Intelligence — An agentic AI system that analyzes datasets and computes KPIs for data-driven decisions.\n🔗 github.com/devyanighildiyal/kpi-agentic-intelligence" },
-      { q: "Any ongoing project?", a: "Yes, I am currently working on an ongoing project on Industrial Surface Defect Detection. It focuses on building a computer vision–based system using deep learning models such as lightweight CNNs and Vision Transformers to automatically detect defects on metal surfaces. The goal is to improve quality inspection in manufacturing by making defect detection faster, more accurate, and suitable for real-time industrial applications. 🔬" },
+      { q: "Tell me more projects!", a: "4. AI-Powered Invoice & PO Verification (Futurix AI) - Automatically verifies invoices against purchase orders to detect mismatches.\n🔗 github.com/devyanighildiyal/AI-Powered-Invoice-and-Purchase-Order-Verification-Futurix-AI-\n\n5. KPI Agentic Intelligence - An agentic AI system that analyzes datasets and computes KPIs for data-driven decisions.\n🔗 github.com/devyanighildiyal/kpi-agentic-intelligence" },
+      { q: "Any ongoing project?", a: "Yes, I am currently working on an ongoing project on Industrial Surface Defect Detection. It focuses on building a computer vision-based system using deep learning models such as lightweight CNNs and Vision Transformers to automatically detect defects on metal surfaces. The goal is to improve quality inspection in manufacturing by making defect detection faster, more accurate, and suitable for real-time industrial applications. 🔬" },
       { q: "What's your favorite project?", a: "My favorite project is the Helper MS HRMS platform that I built for the Google Girl Hackathon. It stands out to me because of the experience behind building it. The hackathon happened on Shivratri, and I was fasting that day, but I still spent day and night working on the project to complete it within the limited time frame. Even though I wasn't selected in the final stage, I'm really proud of what I managed to build under pressure and how much I learned during that process. 🎯" },
       { q: "Any team projects?", a: "Yes, one of my main team projects is Cyber Shield, which I built with a team of three members. I was the team leader, and we developed it as a cybersecurity browser extension that helps detect unsafe patterns and improve online safety. We submitted this project to Hack-O-Mania, IIT Ropar's annual hackathon, where our team secured 2nd place among 150+ competing teams, which was a very rewarding experience. 🚀" },
     ],
@@ -35,7 +35,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "I'm skilled in React, TypeScript, Tailwind CSS, JavaScript, HTML/CSS, UI/UX Design, and creative coding. I'm always learning and expanding my toolkit! 💡",
     followUps: [
-      { q: "What's your strongest skill?", a: "Front-end development — I love crafting pixel-perfect, interactive user interfaces." },
+      { q: "What's your strongest skill?", a: "Front-end development - I love crafting pixel-perfect, interactive user interfaces." },
       { q: "Are you learning anything new?", a: "Always! Currently diving deeper into 3D web experiences with Three.js and exploring AI/ML." },
       { q: "Soft skills?", a: "Communication, collaboration, problem-solving, and a good dose of humor to keep things fun! 😄" },
       { q: "Design tools?", a: "Figma is my go-to for design. I also experiment with Framer and creative tools like p5.js." },
@@ -46,9 +46,9 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "When I'm not coding, you'll find me sketching, binge-watching sci-fi shows, exploring cafés, or experimenting with creative coding art! 🎨",
     followUps: [
-      { q: "Favorite show?", a: "I love sci-fi and mystery — think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
+      { q: "Favorite show?", a: "I love sci-fi and mystery - think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
       { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
-      { q: "Music taste?", a: "Very eclectic — from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
+      { q: "Music taste?", a: "Very eclectic - from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
       { q: "Travel?", a: "I'd love to travel more! Dream destinations include Japan, Iceland, and New Zealand. 🌍" },
     ],
   },
@@ -57,10 +57,10 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyani@example.com\n• LinkedIn: linkedin.com/in/devyani\n• GitHub: github.com/devyani",
     followUps: [
-      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities — freelance, full-time, or collaborations. Let's chat! 🤝" },
+      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities - freelance, full-time, or collaborations. Let's chat! 🤝" },
       { q: "Best way to reach you?", a: "Email is the most reliable way. I usually respond within 24 hours!" },
-      { q: "Social media?", a: "You can find me on Twitter and Instagram too — I share my creative work and tech thoughts there." },
-      { q: "Do you freelance?", a: "Yes, I take on select freelance projects — especially creative and design-focused ones!" },
+      { q: "Social media?", a: "You can find me on Twitter and Instagram too - I share my creative work and tech thoughts there." },
+      { q: "Do you freelance?", a: "Yes, I take on select freelance projects - especially creative and design-focused ones!" },
     ],
   },
 };
