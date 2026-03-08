@@ -39,7 +39,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   fun: {
     initial: "What are your hobbies?",
     answer:
-      "When I'm not coding, you'll find me sketching, binge-watching sci-fi shows, exploring cafés, or experimenting with creative coding art! 🎨",
+      "My hobbies include exploring new technologies and learning about advancements in AI and software development. I also enjoy dancing, singing, and photography, and have a strong interest in creative and performing arts.🎶💃📷💻",
     followUps: [
       { q: "Favorite show?", a: "I love sci-fi and mystery - think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
       { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
