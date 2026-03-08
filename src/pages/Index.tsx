@@ -76,26 +76,28 @@ const Index = () => {
           alt="Devyani emoticon"
           className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_hsl(47,100%,60%,0.3)]"
         />
-        {/* Left eye */}
+        {/* Left eye pupil */}
         <div
-          className="absolute rounded-full bg-foreground pointer-events-none"
+          className="absolute rounded-full pointer-events-none"
           style={{
-            width: "10px",
-            height: "10px",
-            top: "38%",
-            left: "33%",
+            width: "6px",
+            height: "6px",
+            backgroundColor: "#1a1a1a",
+            top: "33%",
+            left: "40%",
             transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
             transition: "transform 0.1s ease-out",
           }}
         />
-        {/* Right eye */}
+        {/* Right eye pupil */}
         <div
-          className="absolute rounded-full bg-foreground pointer-events-none"
+          className="absolute rounded-full pointer-events-none"
           style={{
-            width: "10px",
-            height: "10px",
-            top: "38%",
-            left: "57%",
+            width: "6px",
+            height: "6px",
+            backgroundColor: "#1a1a1a",
+            top: "33%",
+            left: "52%",
             transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
             transition: "transform 0.1s ease-out",
           }}
