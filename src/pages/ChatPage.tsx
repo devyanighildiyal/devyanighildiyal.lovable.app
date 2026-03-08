@@ -5,25 +5,29 @@ import mePhoto from "@/assets/me.jpeg";
 
 const linkify = (text: string) => {
   const urlRegex = /(https?:\/\/[^\s]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|net|dev|io|app|in|co)(?:\/[^\s]*)?|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+  const singleLinkRegex = /^(https?:\/\/[^\s]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|net|dev|io|app|in|co)(?:\/[^\s]*)?|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
   const parts = text.split(urlRegex);
   return parts.map((part, i) => {
-    if (urlRegex.test(part)) {
-      urlRegex.lastIndex = 0;
-      if (part.includes("@") && !part.startsWith("http")) {
-        return (
-          <a key={i} href={`mailto:${part}`} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
-            {part}
-          </a>
-        );
-      }
-      const href = part.startsWith("http") ? part : `https://${part}`;
+    if (!singleLinkRegex.test(part)) return part;
+
+    if (part.includes("@") && !part.startsWith("http")) {
       return (
-        <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+        <a key={i} href={`mailto:${part}`} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
           {part}
         </a>
       );
     }
-    return part;
+
+    const href = part.startsWith("http") ? part : `https://${part}`;
+    const shortText = part.replace(/^https?:\/\//, "");
+    const displayText = shortText.length > 52 ? `${shortText.slice(0, 49)}...` : shortText;
+
+    return (
+      <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity break-words">
+        {displayText}
+      </a>
+    );
   });
 };
 
