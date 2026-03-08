@@ -57,7 +57,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyani@example.com\n• LinkedIn: linkedin.com/in/devyani\n• GitHub: github.com/devyani",
     followUps: [
-      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities — freelance, full-time, or collaborations. Let's chat! 🤝" },
+      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities - freelance, full-time, or collaborations. Let's chat! 🤝" },
       { q: "Best way to reach you?", a: "Email is the most reliable way. I usually respond within 24 hours!" },
       { q: "Social media?", a: "You can find me on Twitter and Instagram too — I share my creative work and tech thoughts there." },
       { q: "Do you freelance?", a: "Yes, I take on select freelance projects — especially creative and design-focused ones!" },
