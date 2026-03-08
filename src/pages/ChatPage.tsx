@@ -46,6 +46,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
       { q: "Do you game?", a: "Yes, I do play games. I usually play Mobile Legends, Legend of Ace, League of Legends, Roblox, and Smash Karts😄" },
       { q: "Music taste?", a: "My music taste is honestly all over the place. I listen to BTS, Bollywood music, Garhwali songs, Little Mix, and Sabrina Carpenter, and I also enjoy devotional music, so it's a pretty wide range depending on my mood. 🎶" },
       { q: "Travel?", a: "I love to travel. Being a Pahadi (someone from the mountains), I especially love traveling to the mountains. The peace and quiet, along with the beautiful views and cool weather, just make it feel like heaven. 🏔️✨" },
+      { q: "What's the craziest travel story you have?", a: "One of my craziest travel experiences was trekking to Kedarnath. I completed a 21 km trek to an altitude of around 3,600 meters in October, when the temperature had dropped to about –5°C. The last two kilometers were extremely tough because the cold air made it feel like my lungs were freezing and I could barely breathe. But the moment I finally reached the Kedarnath temple and stood in front of it, all the exhaustion disappeared and it felt like the entire journey was completely worth it. ✨" },
     ],
   },
   contact: {
