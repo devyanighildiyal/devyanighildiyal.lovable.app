@@ -78,28 +78,22 @@ const ChatPage = () => {
     // Reset on topic change
     setMessages([]);
     setAvailableQs([]);
-    setTyping(true);
+    setTyping(false);
 
     const t1 = setTimeout(() => {
-      setMessages([{ role: "bot", text: data.initial }]);
-      setTyping(false);
-    }, 500);
+      setMessages([{ role: "user", text: data.initial }]);
+      setTyping(true);
+    }, 300);
 
     const t2 = setTimeout(() => {
-      setMessages((prev) => [...prev, { role: "user", text: data.initial }]);
-      setTyping(true);
-    }, 1000);
-
-    const t3 = setTimeout(() => {
       setMessages((prev) => [...prev, { role: "bot", text: data.answer }]);
       setAvailableQs(data.followUps);
       setTyping(false);
-    }, 1800);
+    }, 1200);
 
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
-      clearTimeout(t3);
     };
   }, [topic]);
 
