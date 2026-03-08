@@ -171,6 +171,9 @@ const ChatPage = () => {
                   : "bg-chat-bubble text-foreground rounded-bl-md"
               }`}
             >
+              {msg.role === "bot" && i === 1 && topic === "about" && (
+                <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl mb-3 w-full max-w-[280px]" />
+              )}
               {linkify(msg.text)}
             </div>
           </div>
