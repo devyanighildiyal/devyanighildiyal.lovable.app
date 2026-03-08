@@ -59,7 +59,9 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     initial: "What are your skills?",
     answer:
       "My skills include programming languages such as Python, Java, C, SQL, HTML, CSS, and JavaScript. I have experience in machine learning and deep learning, working with models like CNNs, LSTMs, Transformers, GANs, and Attention-based architectures. I also have full-stack development experience, where I've built applications using React for the frontend and REST APIs with backend frameworks, along with handling databases and system architecture. Additionally, I work with tools such as TensorFlow, Scikit-learn, NumPy, Pandas, Power BI, and Git, and have strong fundamentals in data structures and algorithms, object-oriented programming, data pipelines, and model deployment.",
-    followUps: [],
+    followUps: [
+      { q: "Can you share your resume?", a: "Sure! You can view or download my resume here:\n🔗 /Devyani_Ghildiyal_Resume.pdf" },
+    ],
   },
   fun: {
     initial: "What are your hobbies?",
