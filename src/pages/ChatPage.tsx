@@ -33,13 +33,8 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   skills: {
     initial: "What are your skills?",
     answer:
-      "I'm skilled in React, TypeScript, Tailwind CSS, JavaScript, HTML/CSS, UI/UX Design, and creative coding. I'm always learning and expanding my toolkit! 💡",
-    followUps: [
-      { q: "What's your strongest skill?", a: "Front-end development - I love crafting pixel-perfect, interactive user interfaces." },
-      { q: "Are you learning anything new?", a: "Always! Currently diving deeper into 3D web experiences with Three.js and exploring AI/ML." },
-      { q: "Soft skills?", a: "Communication, collaboration, problem-solving, and a good dose of humor to keep things fun! 😄" },
-      { q: "Design tools?", a: "Figma is my go-to for design. I also experiment with Framer and creative tools like p5.js." },
-    ],
+      "My skills include programming languages such as Python, Java, C, SQL, HTML, CSS, and JavaScript. I have experience in machine learning and deep learning, working with models like CNNs, LSTMs, Transformers, GANs, and Attention-based architectures. I also have full-stack development experience, where I've built applications using React for the frontend and REST APIs with backend frameworks, along with handling databases and system architecture. Additionally, I work with tools such as TensorFlow, Scikit-learn, NumPy, Pandas, Power BI, and Git, and have strong fundamentals in data structures and algorithms, object-oriented programming, data pipelines, and model deployment.",
+    followUps: [],
   },
   fun: {
     initial: "What are your hobbies?",
