@@ -1,0 +1,200 @@
+import { useState, useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Home, Send } from "lucide-react";
+
+interface Message {
+  role: "bot" | "user";
+  text: string;
+}
+
+const chatData: Record<string, { initial: string; answer: string; followUps: { q: string; a: string }[] }> = {
+  about: {
+    initial: "Who are you?",
+    answer:
+      "Hey! I'm Devyani — a creative developer and designer who loves turning ideas into beautiful digital experiences. I'm passionate about blending code with art! ✨",
+    followUps: [
+      { q: "Where are you from?", a: "I'm from India 🇮🇳 — a land of diversity, culture, and incredible food!" },
+      { q: "What's your background?", a: "I have a background in computer science with a strong interest in design, front-end development, and creative coding." },
+      { q: "What drives you?", a: "Curiosity and the joy of creating things that make people smile. I believe technology should feel human." },
+      { q: "What's a fun fact about you?", a: "I can spend hours debugging code and still find it therapeutic. Also, I'm a huge tea person! 🍵" },
+    ],
+  },
+  projects: {
+    initial: "What are your projects?",
+    answer:
+      "I've worked on a variety of projects — from interactive web apps and portfolio sites to creative experiments with animations and generative art. Each project teaches me something new! 🚀",
+    followUps: [
+      { q: "What's your favorite project?", a: "This portfolio itself! Building something that represents me creatively was a rewarding challenge." },
+      { q: "Do you do open source?", a: "Yes! I love contributing to open-source projects. It's a great way to learn and give back to the community." },
+      { q: "Any team projects?", a: "I've collaborated on hackathon projects and group assignments — teamwork makes the dream work! 🤝" },
+      { q: "What tech do you use?", a: "React, TypeScript, Tailwind CSS, Node.js, and I'm always exploring new tools and frameworks." },
+    ],
+  },
+  skills: {
+    initial: "What are your skills?",
+    answer:
+      "I'm skilled in React, TypeScript, Tailwind CSS, JavaScript, HTML/CSS, UI/UX Design, and creative coding. I'm always learning and expanding my toolkit! 💡",
+    followUps: [
+      { q: "What's your strongest skill?", a: "Front-end development — I love crafting pixel-perfect, interactive user interfaces." },
+      { q: "Are you learning anything new?", a: "Always! Currently diving deeper into 3D web experiences with Three.js and exploring AI/ML." },
+      { q: "Soft skills?", a: "Communication, collaboration, problem-solving, and a good dose of humor to keep things fun! 😄" },
+      { q: "Design tools?", a: "Figma is my go-to for design. I also experiment with Framer and creative tools like p5.js." },
+    ],
+  },
+  fun: {
+    initial: "What are your hobbies?",
+    answer:
+      "When I'm not coding, you'll find me sketching, binge-watching sci-fi shows, exploring cafés, or experimenting with creative coding art! 🎨",
+    followUps: [
+      { q: "Favorite show?", a: "I love sci-fi and mystery — think Black Mirror, Stranger Things, and anything mind-bending! 🍿" },
+      { q: "Do you game?", a: "Occasionally! I enjoy puzzle and story-driven games. They're great for creative inspiration." },
+      { q: "Music taste?", a: "Very eclectic — from lo-fi beats while coding to Bollywood bangers during breaks! 🎵" },
+      { q: "Travel?", a: "I'd love to travel more! Dream destinations include Japan, Iceland, and New Zealand. 🌍" },
+    ],
+  },
+  contact: {
+    initial: "How to reach you?",
+    answer:
+      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyani@example.com\n• LinkedIn: linkedin.com/in/devyani\n• GitHub: github.com/devyani",
+    followUps: [
+      { q: "Are you open to work?", a: "Yes! I'm always open to exciting opportunities — freelance, full-time, or collaborations. Let's chat! 🤝" },
+      { q: "Best way to reach you?", a: "Email is the most reliable way. I usually respond within 24 hours!" },
+      { q: "Social media?", a: "You can find me on Twitter and Instagram too — I share my creative work and tech thoughts there." },
+      { q: "Do you freelance?", a: "Yes, I take on select freelance projects — especially creative and design-focused ones!" },
+    ],
+  },
+};
+
+const ChatPage = () => {
+  const { topic } = useParams<{ topic: string }>();
+  const navigate = useNavigate();
+  const data = chatData[topic || ""] || chatData.about;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [availableQs, setAvailableQs] = useState<{ q: string; a: string }[]>([]);
+  const [typing, setTyping] = useState(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Reset on topic change
+    setMessages([]);
+    setAvailableQs([]);
+    setTyping(true);
+
+    const t1 = setTimeout(() => {
+      setMessages([{ role: "bot", text: data.initial }]);
+      setTyping(false);
+    }, 500);
+
+    const t2 = setTimeout(() => {
+      setMessages((prev) => [...prev, { role: "user", text: data.initial }]);
+      setTyping(true);
+    }, 1000);
+
+    const t3 = setTimeout(() => {
+      setMessages((prev) => [...prev, { role: "bot", text: data.answer }]);
+      setAvailableQs(data.followUps);
+      setTyping(false);
+    }, 1800);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
+  }, [topic]);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, typing]);
+
+  const handleQuestion = (q: string, a: string) => {
+    setMessages((prev) => [...prev, { role: "user", text: q }]);
+    setAvailableQs((prev) => prev.filter((item) => item.q !== q));
+    setTyping(true);
+
+    setTimeout(() => {
+      setMessages((prev) => [...prev, { role: "bot", text: a }]);
+      setTyping(false);
+    }, 1000);
+  };
+
+  const topicLabels: Record<string, string> = {
+    about: "About Me",
+    projects: "Projects",
+    skills: "Skills",
+    fun: "Fun",
+    contact: "Contact",
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen bg-background">
+      {/* Header */}
+      <header className="sticky top-0 z-10 flex items-center gap-3 px-4 py-3 border-b border-border bg-background/80 backdrop-blur-md">
+        <button
+          onClick={() => navigate("/")}
+          className="p-2 rounded-lg hover:bg-secondary transition-colors"
+          aria-label="Go home"
+        >
+          <Home className="w-5 h-5 text-primary" />
+        </button>
+        <h2 className="font-display font-semibold text-foreground text-lg">
+          {topicLabels[topic || "about"]}
+        </h2>
+      </header>
+
+      {/* Messages */}
+      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4 max-w-2xl mx-auto w-full">
+        {messages.map((msg, i) => (
+          <div
+            key={i}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} animate-fade-in`}
+          >
+            <div
+              className={`max-w-[80%] px-4 py-3 rounded-2xl font-body text-sm leading-relaxed whitespace-pre-line ${
+                msg.role === "user"
+                  ? "bg-primary text-primary-foreground rounded-br-md"
+                  : "bg-chat-bubble text-foreground rounded-bl-md"
+              }`}
+            >
+              {msg.text}
+            </div>
+          </div>
+        ))}
+
+        {typing && (
+          <div className="flex justify-start animate-fade-in">
+            <div className="bg-chat-bubble px-4 py-3 rounded-2xl rounded-bl-md">
+              <div className="flex gap-1">
+                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div ref={bottomRef} />
+      </div>
+
+      {/* Suggested questions */}
+      {availableQs.length > 0 && (
+        <div className="sticky bottom-0 border-t border-border bg-background/90 backdrop-blur-md px-4 py-4">
+          <p className="text-xs text-muted-foreground font-mono mb-2 uppercase tracking-wider">Ask me more</p>
+          <div className="flex flex-wrap gap-2 max-w-2xl mx-auto">
+            {availableQs.map((item) => (
+              <button
+                key={item.q}
+                onClick={() => handleQuestion(item.q, item.a)}
+                className="px-4 py-2 text-sm rounded-full border border-border bg-secondary text-foreground font-body hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200"
+              >
+                {item.q}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ChatPage;
