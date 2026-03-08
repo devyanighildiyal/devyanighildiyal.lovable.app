@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Home } from "lucide-react";
+import mePhoto from "@/assets/me.jpeg";
 
 const linkify = (text: string) => {
   const urlRegex = /(https?:\/\/[^\s]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|net|dev|io|app|in|co)(?:\/[^\s]*)?|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
@@ -170,6 +171,9 @@ const ChatPage = () => {
                   : "bg-chat-bubble text-foreground rounded-bl-md"
               }`}
             >
+              {msg.role === "bot" && i === 1 && topic === "about" && (
+                <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl mb-3 w-full max-w-[280px]" />
+              )}
               {linkify(msg.text)}
             </div>
           </div>
