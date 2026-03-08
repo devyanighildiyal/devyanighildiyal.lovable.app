@@ -82,8 +82,8 @@ const Index = () => {
           style={{
             width: "6px",
             height: "6px",
-            backgroundColor: "white",
-            top: "39%",
+            backgroundColor: "red",
+            top: "42%",
             left: "36%",
             transform: `translate(${eyeOffset.x}px, ${eyeOffset.y}px)`,
             transition: "transform 0.1s ease-out",
