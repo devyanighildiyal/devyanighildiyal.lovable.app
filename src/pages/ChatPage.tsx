@@ -170,7 +170,7 @@ const ChatPage = () => {
                   : "bg-chat-bubble text-foreground rounded-bl-md"
               }`}
             >
-              {msg.text}
+              {linkify(msg.text)}
             </div>
           </div>
         ))}
