@@ -1,11 +1,73 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import emoticon from "@/assets/emoticon.png";
+
+const navItems = [
+  { label: "About Me", path: "/chat/about" },
+  { label: "Projects", path: "/chat/projects" },
+  { label: "Skills", path: "/chat/skills" },
+  { label: "Fun", path: "/chat/fun" },
+  { label: "Contact Me", path: "/chat/contact" },
+];
 
 const Index = () => {
+  const navigate = useNavigate();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouse = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
+  }, []);
+
+  useEffect(() => {
+    const cx = window.innerWidth / 2;
+    const cy = window.innerHeight / 2;
+    const dx = (mousePos.x - cx) / cx;
+    const dy = (mousePos.y - cy) / cy;
+    setOffset({ x: dx * 30, y: dy * 20 });
+  }, [mousePos]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background px-4 overflow-hidden">
+      {/* Subtle glow */}
+      <div
+        className="pointer-events-none fixed inset-0 opacity-20"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, hsl(47 100% 60% / 0.15), transparent 60%)`,
+        }}
+      />
+
+      <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground mb-12 tracking-tight select-none">
+        Hi, I am <span className="text-primary">Devyani</span>
+      </h1>
+
+      <div
+        className="mb-16 transition-transform duration-150 ease-out"
+        style={{
+          transform: `translate(${offset.x}px, ${offset.y}px) rotate(${offset.x * 0.3}deg)`,
+        }}
+      >
+        <img
+          src={emoticon}
+          alt="Devyani emoticon"
+          className="w-32 h-32 md:w-40 md:h-40 drop-shadow-[0_0_25px_hsl(47,100%,60%,0.3)]"
+        />
+      </div>
+
+      <div className="flex flex-wrap gap-4 justify-center">
+        {navItems.map((item) => (
+          <button
+            key={item.path}
+            onClick={() => navigate(item.path)}
+            className="px-6 py-3 rounded-full border border-border bg-secondary font-display font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_hsl(47,100%,60%,0.3)]"
+          >
+            {item.label}
+          </button>
+        ))}
       </div>
     </div>
   );
