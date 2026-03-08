@@ -171,10 +171,14 @@ const ChatPage = () => {
                   : "bg-chat-bubble text-foreground rounded-bl-md"
               }`}
             >
-              {msg.role === "bot" && i === 1 && topic === "about" && (
-                <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl mb-3 w-full max-w-[280px]" />
+              {msg.role === "bot" && i === 1 && topic === "about" ? (
+                <div className="flex gap-3 items-start">
+                  <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl w-28 sm:w-36 flex-shrink-0 object-cover" />
+                  <span>{linkify(msg.text)}</span>
+                </div>
+              ) : (
+                linkify(msg.text)
               )}
-              {linkify(msg.text)}
             </div>
           </div>
         ))}
