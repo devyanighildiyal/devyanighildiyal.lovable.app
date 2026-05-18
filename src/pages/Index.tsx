@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emoticon from "@/assets/emoticon.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "About Me", path: "/chat/about" },
