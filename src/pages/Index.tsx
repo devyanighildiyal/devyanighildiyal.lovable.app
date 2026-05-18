@@ -56,7 +56,7 @@ const Index = () => {
         <img
           src={emoticon}
           alt="Devyani emoticon"
-          className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+          className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_hsl(var(--avatar-glow)/0.6)]"
         />
       </div>
 
