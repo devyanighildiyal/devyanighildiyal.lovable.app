@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emoticon from "@/assets/emoticon.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "About Me", path: "/chat/about" },
@@ -33,6 +34,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background px-4 overflow-hidden">
+      <ThemeToggle />
       {/* Subtle glow */}
       <div
         className="pointer-events-none fixed inset-0 opacity-20"
@@ -54,7 +56,7 @@ const Index = () => {
         <img
           src={emoticon}
           alt="Devyani emoticon"
-          className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+          className="w-44 h-44 md:w-56 md:h-56 drop-shadow-[0_0_25px_hsl(var(--avatar-glow)/0.6)]"
         />
       </div>
 
