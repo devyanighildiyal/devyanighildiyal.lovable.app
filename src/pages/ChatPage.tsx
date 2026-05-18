@@ -65,7 +65,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "My skills include programming languages such as Python, Java, C, SQL, HTML, CSS, and JavaScript. I have experience in machine learning and deep learning, working with models like CNNs, LSTMs, Transformers, GANs, and Attention-based architectures. I also have full-stack development experience, where I've built applications using React for the frontend and REST APIs with backend frameworks, along with handling databases and system architecture. Additionally, I work with tools such as TensorFlow, Scikit-learn, NumPy, Pandas, Power BI, and Git, and have strong fundamentals in data structures and algorithms, object-oriented programming, data pipelines, and model deployment.",
     followUps: [
-      { q: "Can you share your resume?", a: "Sure! You can view or download my resume here:\n🔗 https://drive.google.com/file/d/1k7SEo6fJv5q4G6ZwbNC0yfQTfx6HTJmX/view?usp=drive_link" },
+      { q: "Can you share your resume?", a: "Sure! You can view or download my resume here:\n🔗 /Devyani_Ghildiyal_Resume.pdf" },
     ],
   },
   fun: {
@@ -84,7 +84,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   contact: {
     initial: "How to reach you?",
     answer:
-      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyanighildiyal07@gmail.com\n• LinkedIn: linkedin.com/in/devyani-ghildiyal-804948223\n• GitHub: github.com/devyanighildiyal",
+      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyanighildiyal07@gmail.com\n• LinkedIn: linkedin.com/in/devyani-ghildiyal\n• GitHub: github.com/devyanighildiyal",
     followUps: [
       { q: "Best way to reach you?", a: "The best way to reach me is through email or LinkedIn. If you happen to have my phone number, then that's probably the easiest way to contact me. 😊" },
       { q: "Social media?", a: "You can find me on Twitter and Instagram too!\n\n• Instagram: instagram.com/devyanighildiyal\n• Twitter: x.com/heyItsDevyani" },
