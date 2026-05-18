@@ -34,6 +34,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background px-4 overflow-hidden">
+      <ThemeToggle />
       {/* Subtle glow */}
       <div
         className="pointer-events-none fixed inset-0 opacity-20"
