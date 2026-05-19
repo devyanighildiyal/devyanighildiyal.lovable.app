@@ -210,7 +210,17 @@ const ChatPage = () => {
       {/* Suggested questions */}
       {availableQs.length > 0 && (
         <div className="sticky bottom-0 border-t border-border bg-background/90 backdrop-blur-md px-4 py-4">
-          <p className="text-xs text-muted-foreground font-mono mb-2 uppercase tracking-wider">Ask me more</p>
+          <div className="max-w-2xl mx-auto flex items-center justify-between gap-3 mb-3">
+            <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Ask me more</p>
+            {topic !== "contact" && (
+              <button
+                onClick={() => navigate("/chat/contact")}
+                className="px-4 py-2 text-xs rounded-full border border-primary bg-primary text-primary-foreground font-body hover:opacity-90 transition-all duration-200 uppercase tracking-wider"
+              >
+                Contact Me
+              </button>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 max-w-2xl mx-auto">
             {availableQs.map((item) => (
               <button
