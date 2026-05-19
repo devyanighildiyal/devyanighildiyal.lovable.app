@@ -45,7 +45,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     followUps: [
       { q: "Where are you from?", a: "I'm originally from Dehradun, Uttarakhand." },
       { q: "What drives you?", a: "What drives me is my curiosity to learn new technologies and understand how things work, especially in the field of AI and machine learning. I enjoy solving problems and building projects that turn ideas into real, practical solutions." },
-      { q: "When did you started to code?", a: "I first got started in tech back in 5th grade during my computer science class in school. We were introduced to Scratch, where we learned how to build simple games and animations. Creating games there really sparked my interest, which gradually grew into a deeper curiosity about computers and technology." },
+      { q: "When did you start to code?", a: "I first got started in tech back in 5th grade during my computer science class in school. We were introduced to Scratch, where we learned how to build simple games and animations. Creating games there really sparked my interest, which gradually grew into a deeper curiosity about computers and technology." },
       { q: "What are your education qualifications?", a: "I completed my schooling from Delhi Public School, RK Puram, and I am currently pursuing my final year of B.Tech in Computer Science and Engineering at Manipal University Jaipur, with a minor specialization in Data Analytics." },
       { q: "What work experience do you have?", a: "I worked as a Data Analyst Intern at Powercon Ventures India Pvt. Ltd., Pune, from May 2025 to July 2025. During my internship, I worked on renewable energy and wind turbine data analysis, where I analyzed SCADA data and DLB reports to calculate key turbine KPIs such as PLF, MTTR, and MTBF. I also helped automate fault-tracking dashboards using Python and Power BI to reduce manual reporting efforts. Additionally, I contributed to the development of an AI-powered operator chatbot by integrating NLP techniques with SCADA signals to support real-time monitoring and improve fault analysis workflows." },
     ],
@@ -210,7 +210,17 @@ const ChatPage = () => {
       {/* Suggested questions */}
       {availableQs.length > 0 && (
         <div className="sticky bottom-0 border-t border-border bg-background/90 backdrop-blur-md px-4 py-4">
-          <p className="text-xs text-muted-foreground font-mono mb-2 uppercase tracking-wider">Ask me more</p>
+          <div className="max-w-2xl mx-auto flex items-center justify-between gap-3 mb-3">
+            <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Ask me more</p>
+            {topic !== "contact" && (
+              <button
+                onClick={() => navigate("/chat/contact")}
+                className="px-4 py-2 text-xs rounded-full border border-primary bg-primary text-primary-foreground font-body hover:opacity-90 transition-all duration-200 uppercase tracking-wider"
+              >
+                Contact Me
+              </button>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 max-w-2xl mx-auto">
             {availableQs.map((item) => (
               <button
