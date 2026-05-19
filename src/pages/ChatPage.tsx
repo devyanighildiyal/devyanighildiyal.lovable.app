@@ -66,30 +66,30 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
     answer:
       "My skills include programming languages such as Python, Java, C, SQL, HTML, CSS, and JavaScript. I have experience in machine learning and deep learning, working with models like CNNs, LSTMs, Transformers, GANs, and Attention-based architectures. I also have full-stack development experience, where I've built applications using React for the frontend and REST APIs with backend frameworks, along with handling databases and system architecture. Additionally, I work with tools such as TensorFlow, Scikit-learn, NumPy, Pandas, Power BI, and Git, and have strong fundamentals in data structures and algorithms, object-oriented programming, data pipelines, and model deployment.",
     followUps: [
-      { q: "Can you share your resume?", a: "Sure! You can view or download my resume here:\n🔗 /Devyani_Ghildiyal_Resume.pdf" },
+      { q: "Can you share your resume?", a: "Sure! You can view or download my resume here:\nhttps://drive.google.com/file/d/1inmSo_MeyvmgWm9tm2H7Vs3jGpZHGHV5/view?usp=sharing" },
     ],
   },
   fun: {
     initial: "What are your hobbies?",
     answer:
-      "My hobbies include exploring new technologies and learning about advancements in AI and software development. I also enjoy dancing, singing, and photography, and have a strong interest in creative and performing arts.🎶💃📷💻",
+      "My hobbies include exploring new technologies and learning about advancements in AI and software development. I also enjoy dancing, singing, and photography, and have a strong interest in creative and performing arts.",
     followUps: [
-      { q: "What dance do you perform?", a: "I perform Bharatanatyam, a classical Indian dance form, and I have been practicing it for over 11 years. Along with that, I also enjoy exploring and performing various other dance styles. If anyone ever wants to collaborate on dance projects or performances, feel free to reach out! 💃✨" },
+      { q: "What dance do you perform?", a: "I perform Bharatanatyam, a classical Indian dance form, and I have been practicing it for over 11 years. Along with that, I also enjoy exploring and performing various other dance styles. If anyone ever wants to collaborate on dance projects or performances, feel free to reach out!" },
       { q: "Favorite show?", a: "My favorite shows are Brooklyn Nine-Nine and Frieren: Beyond Journey's End." },
-      { q: "Do you game?", a: "Yes, I do play games. I usually play Mobile Legends, Legend of Ace, League of Legends, Roblox, and Smash Karts😄" },
-      { q: "Music taste?", a: "My music taste is honestly all over the place. I listen to K-pop, Bollywood music, Garhwali songs, Little Mix, and Sabrina Carpenter, and I also enjoy devotional music, so it's a pretty wide range depending on my mood. 🎶" },
-      { q: "Travel?", a: "I love to travel. Being a Pahadi (someone from the mountains), I especially love traveling to the mountains. The peace and quiet, along with the beautiful views and cool weather, just make it feel like heaven. 🏔️✨" },
-      { q: "What's the craziest travel story you have?", a: "One of my craziest travel experiences was trekking to Kedarnath. I completed a 21 km trek to an altitude of around 3,600 meters in October, when the temperature had dropped to about –5°C. The last two kilometers were extremely tough because the cold air made it feel like my lungs were freezing and I could barely breathe. But the moment I finally reached the Kedarnath temple and stood in front of it, all the exhaustion disappeared and it felt like the entire journey was completely worth it. ✨" },
+      { q: "Do you game?", a: "Yes, I do play games. I usually play Mobile Legends, Legend of Ace, League of Legends, Roblox, and Smash Karts." },
+      { q: "Music taste?", a: "My music taste is honestly all over the place. I listen to K-pop, Bollywood music, Garhwali songs, Little Mix, and Sabrina Carpenter, and I also enjoy devotional music, so it's a pretty wide range depending on my mood." },
+      { q: "Travel?", a: "I love to travel. Being a Pahadi (someone from the mountains), I especially love traveling to the mountains. The peace and quiet, along with the beautiful views and cool weather, just make it feel like heaven." },
+      { q: "What's the craziest travel story you have?", a: "One of my craziest travel experiences was trekking to Kedarnath. I completed a 21 km trek to an altitude of around 3,600 meters in October, when the temperature had dropped to about -5°C. The last two kilometers were extremely tough because the cold air made it feel like my lungs were freezing and I could barely breathe. But the moment I finally reached the Kedarnath temple and stood in front of it, all the exhaustion disappeared and it felt like the entire journey was completely worth it." },
     ],
   },
   contact: {
     initial: "How to reach you?",
     answer:
-      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating! 📬\n\n• Email: devyanighildiyal07@gmail.com\n• LinkedIn: linkedin.com/in/devyani-ghildiyal\n• GitHub: github.com/devyanighildiyal",
+      "You can reach me via email, LinkedIn, or GitHub. I'm always open to connecting and collaborating!\n\n• Email: devyanighildiyal07@gmail.com\n• LinkedIn: linkedin.com/in/devyani-ghildiyal\n• GitHub: github.com/devyanighildiyal",
     followUps: [
-      { q: "Best way to reach you?", a: "The best way to reach me is through email or LinkedIn. If you happen to have my phone number, then that's probably the easiest way to contact me. 😊" },
+      { q: "Best way to reach you?", a: "The best way to reach me is through email or LinkedIn. If you happen to have my phone number, then that's probably the easiest way to contact me." },
       { q: "Social media?", a: "You can find me on Twitter and Instagram too!\n\n• Instagram: instagram.com/devyanighildiyal\n• Twitter: x.com/heyItsDevyani" },
-      { q: "Do you freelance?", a: "Yes, I do. I'm open to freelance projects, collaborations, and interesting tech opportunities. 😊" },
+      { q: "Do you freelance?", a: "Yes, I do. I'm open to freelance projects, collaborations, and interesting tech opportunities." },
     ],
   },
 };
