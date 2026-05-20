@@ -41,7 +41,7 @@ const chatData: Record<string, { initial: string; answer: string; followUps: { q
   about: {
     initial: "Who are you?",
     answer:
-      "My name is Devyani Ghildiyal. I currently live in Noida, Uttar Pradesh, but my roots are in the beautiful hills of Dehradun, Uttarakhand. I am a Computer Science student with a keen interest in Artificial Intelligence and Machine Learning . I enjoy working on intelligent systems, research-driven projects, and solving real-world problems through technology. Outside academics, I like exploring new ideas, building projects, and continuously learning something new✨",
+      "My name is Devyani Ghildiyal. I currently live in Noida, Uttar Pradesh, but my roots are in the beautiful hills of Dehradun, Uttarakhand. I am a Computer Science student with a keen interest in Artificial Intelligence and Machine Learning .",
     followUps: [
       { q: "What drives you?", a: "What drives me is my curiosity to learn new technologies and understand how things work, especially in the field of AI and machine learning. I enjoy solving problems and building projects that turn ideas into real, practical solutions." },
       { q: "When did you start to code?", a: "I first started to code back in 5th grade during my computer science class in school. We were introduced to Scratch, where we learned how to build simple games and animations. Creating games there really sparked my interest, which gradually grew into a deeper curiosity about computers and technology." },
