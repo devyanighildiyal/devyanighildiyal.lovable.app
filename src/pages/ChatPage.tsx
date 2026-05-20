@@ -180,8 +180,8 @@ const ChatPage = () => {
               }`}
             >
               {msg.role === "bot" && i === 1 && topic === "about" ? (
-                <div className="flex gap-3 items-start">
-                  <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl w-28 sm:w-36 flex-shrink-0 object-cover" />
+                <div className="flex gap-3 items-center">
+                  <img src={mePhoto} alt="Devyani Ghildiyal" className="rounded-xl w-24 sm:w-32 flex-shrink-0 object-cover self-center" />
                   <span>{linkify(msg.text)}</span>
                 </div>
               ) : (
